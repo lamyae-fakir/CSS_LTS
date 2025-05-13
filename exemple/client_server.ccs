@@ -1,0 +1,9 @@
+// Client-Server CCS model
+
+Client = req.ClientWait + timeout.Client
+ClientWait = res.Client + timeout.Client
+
+Server = req̅.ServerWait
+ServerWait = res̅.Server + crash.0
+
+System = (Client | Server) \ {req, res}
