@@ -1,0 +1,21 @@
+digraph LTS {
+  rankdir=LR;
+  node [shape=circle];
+
+  S0 -> S1 [label="τ"];
+  S0 -> S2 [label="timeout"];
+
+  S1 -> S0 [label="τ"];
+  S1 -> S3 [label="timeout"];
+  S1 -> S4 [label="crash"];
+
+  S2 -> S5 [label="τ"];
+  S2 -> S6 [label="d"];
+
+  S3 -> S7 [label="τ"];
+  S3 -> S6 [label="c"];
+
+  S4 -> S4 [label="τ"];
+
+  S5 -> S6 [label="b"];
+}
