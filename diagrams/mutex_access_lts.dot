@@ -1,0 +1,18 @@
+digraph MutexLTS {
+    rankdir=LR;
+    node [shape=circle];
+
+    // États initiaux
+  S0 -> S1 [label="reqA"];
+    S0 -> S2 [label="reqB"];
+    S0 -> S3 [label="waitA"];
+    S0 -> S4 [label="waitB"];
+
+    // Transitions internes simulées par synchronisation
+  S1 -> S5 [label="τ"]; // enterA
+  S2 -> S6 [label="τ"]; // enterB
+
+    // Sorties de la ressource
+  S5 -> S0 [label="τ"]; // exitA
+  S6 -> S0 [label="τ"]; // exitB
+}

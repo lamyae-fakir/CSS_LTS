@@ -1,0 +1,16 @@
+// Définition du processus utilisateur A
+UserA = reqA.AccessA + waitA.UserA
+
+// Lorsqu'il accède à la ressource
+AccessA = enterA.ExitA
+
+// Lorsqu'il sort de la ressource
+ExitA = exitA.UserA
+
+
+UserB = reqB.AccessB + waitB.UserB
+AccessB = enterB.ExitB
+ExitB = exitB.UserB
+
+System = (UserA | UserB) \ {enterA, enterB, exitA, exitB}
+
