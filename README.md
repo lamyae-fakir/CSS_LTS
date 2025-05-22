@@ -2,10 +2,11 @@
 
 ##  Description
 
-Ce projet modélise deux systèmes concurrentiels en utilisant le **Calcul des Communications de Systèmes (CCS)** :
+Ce projet modélise 3 systèmes concurrentiels en utilisant le **Calcul des Communications de Systèmes (CCS)** :
 - Un modèle **Client – Serveur** avec gestion d’erreurs et de masquage
 - Un modèle **d’accès exclusif** à une ressource critique (exclusion mutuelle)
 - Un modèle **Gossiping Girls** illustrant la diffusion d'information minimale entre processus
+
 ##  How to Install
 
 1. Faut télécharger et installer **Graphviz** :  
