@@ -1,0 +1,21 @@
+// Gossiping Girls – CCS Model (n = 4)
+
+// État initial
+GirlA = callAB.GirlAB
+GirlB = callBA.GirlAB
+GirlC = waitC
+GirlD = waitD
+
+// Après appel entre A et B
+GirlAB = callABC.GirlABC
+waitC = callABC.GirlABC
+waitD = callABCD.GirlABCD
+
+// Appel entre AB et C
+GirlABC = callABCD.GirlABCD
+
+// Appel final vers D → tout le monde connaît tout
+GirlABCD = 0
+
+// Système avec masquage des appels
+System = (GirlA | GirlB | GirlC | GirlD) \ {callAB, callBA, callABC, callABCD}
